@@ -1,0 +1,1 @@
+C:\TMinus1010\Projects\Coding\C#\ExamplePOS\ExamplePOS\bin\Debug\ExamplePOS.exe.config
