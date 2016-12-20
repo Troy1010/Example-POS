@@ -6,15 +6,38 @@ using System.Threading.Tasks;
 
 namespace ExamplePOS
 {
-    class Menu
+    class Menu // HM. Can classes be defined in other classes? Are all classes defined on the same level?
     {
-        public List<MenuItem> Items = new List<MenuItem>();
+        public List<MenuItem> Items = new List<MenuItem>(); // Is writing new List<MenuItem>() necessary?
+        public Dictionary<string, List<string>> d2dMatchables()
+        {
+            Dictionary<string, List<string>> d2dReturning = new Dictionary<string, List<string>>();
+            foreach (var menuItem in Items)
+            {
+                d2dReturning.Add(menuItem.Name,new List<string>() { menuItem.Name });
+            }
+            return d2dReturning;
+        }
+        public string GenerateRegexPattern() // Broken
+        {
+            string sReturning = "Done|";
+            foreach (var menuItem in Items.SkipFirst())
+            {
+                if (!menuItem.Item2)
+                {
+                    sReturning += "|";
+                }
+                sReturning += menuItem.Item1.Name;
+            }
+            sReturning = "\b(" + sReturning + ")\b";
+            return sReturning;
+        }
         public string Narrate2()
         {
             // This version is to be read by user
             string sReturning = "";
             int iTabCount = 0;
-            foreach (var menuItem in this.Items.SkipFirst())
+            foreach (var menuItem in Items.SkipFirst())
             {
                 if (!menuItem.Item2)
                 {
@@ -30,7 +53,7 @@ namespace ExamplePOS
         {
             // This version is to be read by developer
             string sReturning = "";
-            foreach (var menuItem in this.Items.SkipFirst())
+            foreach (var menuItem in Items.SkipFirst())
             {
                 if (!menuItem.Item2)
                 {
