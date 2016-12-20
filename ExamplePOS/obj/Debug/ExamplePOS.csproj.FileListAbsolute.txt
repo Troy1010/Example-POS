@@ -1,1 +1,6 @@
 C:\TMinus1010\Projects\Coding\C#\ExamplePOS\ExamplePOS\bin\Debug\ExamplePOS.exe.config
+C:\TMinus1010\Projects\Coding\C#\ExamplePOS\ExamplePOS\bin\Debug\ExamplePOS.exe
+C:\TMinus1010\Projects\Coding\C#\ExamplePOS\ExamplePOS\bin\Debug\ExamplePOS.pdb
+C:\TMinus1010\Projects\Coding\C#\ExamplePOS\ExamplePOS\obj\Debug\ExamplePOS.csprojResolveAssemblyReference.cache
+C:\TMinus1010\Projects\Coding\C#\ExamplePOS\ExamplePOS\obj\Debug\ExamplePOS.exe
+C:\TMinus1010\Projects\Coding\C#\ExamplePOS\ExamplePOS\obj\Debug\ExamplePOS.pdb
